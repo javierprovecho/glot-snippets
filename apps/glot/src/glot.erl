@@ -27,6 +27,8 @@ stop() ->
 
 applications() ->
     [
+        certifi,
+        mimerl,
         syntax_tools,
         compiler,
         goldrush,
