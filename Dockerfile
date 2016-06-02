@@ -1,11 +1,10 @@
 FROM javierprovecho/erlang-18
 MAINTAINER javiertitan@gmail.com
 
-RUN git clone https://github.com/javierprovecho/glot-snippets /glot-snippets/ &&\
- cd /glot-snippets/ &&\
- rebar g-d &&\
+COPY . /glot-snippets/.
+WORKDIR /glot-snippets/
+RUN rebar g-d &&\
  rebar compile &&\
  relx -c config/relx.config
 
-WORKDIR /glot-snippets/
 CMD ./start.sh
