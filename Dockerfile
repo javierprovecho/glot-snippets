@@ -8,5 +8,4 @@ RUN git clone https://github.com/javierprovecho/glot-snippets /glot-snippets/ &&
  relx -c config/relx.config
 
 WORKDIR /glot-snippets/
-CMD ["erl", "-noshell", "-pa", "$PWD/apps/*/ebin", "$PWD/deps/*/ebin", "-s", "glot"]
-
+CMD ./start.sh
