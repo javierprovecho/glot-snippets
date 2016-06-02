@@ -1,7 +1,7 @@
 FROM javierprovecho/erlang-18
 MAINTAINER javiertitan@gmail.com
 
-RUN git clone https://github.com/prasmussen/glot-snippets /glot-snippets/ &&\
+RUN git clone https://github.com/javierprovecho/glot-snippets /glot-snippets/ &&\
  cd /glot-snippets/ &&\
  rebar g-d &&\
  rebar compile &&\
