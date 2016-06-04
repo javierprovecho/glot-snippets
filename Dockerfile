@@ -3,8 +3,8 @@ MAINTAINER javiertitan@gmail.com
 
 COPY . /glot-snippets/.
 WORKDIR /glot-snippets/
-RUN rebar g-d &&\
- rebar compile &&\
- relx -c config/relx.config
+RUN rebar3 compile &&\
+ rebar3 release -c config/relx.config
 
-CMD ./start.sh
+WORKDIR /glot-snippets/_build/default/rel/glot
+CMD ["bin/glot", "foreground"]
