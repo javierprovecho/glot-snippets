@@ -2,7 +2,7 @@ language: bash
 services: docker
 
 script:
-  - docker build --no-cache -t javierprovecho/erlang-18:travis .
+  - docker build --no-cache -t javierprovecho/glot-snippets:travisci .
 
 after_script:
   - docker images
